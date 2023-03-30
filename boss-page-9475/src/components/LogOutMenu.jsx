@@ -12,20 +12,19 @@ function LogOutMenu({ phoneNo }) {
   return (
     <Menu>
       <MenuButton
+      bg={"teal.600"}
         style={{
-          border: "0px solid black",
           width: "150px",
           marginTop: "2px",
           marginLeft: "-20px",
-          backgroundColor: "#eef4ff",
-          borderRadius: "10px",
+          borderRadius: "20px",
           height: "38px",
-
           fontSize: "15px",
         }}>
-        User +91 <span>{phoneNo}</span>
+        User
       </MenuButton>
-      <MenuList>
+      <MenuList
+      style={{color:"black"}}>
         <MenuItem>
           <b>Your Account</b>
         </MenuItem>

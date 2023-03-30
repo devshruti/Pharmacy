@@ -1,7 +1,9 @@
 import React from "react";
 import cartStyle from "../style/Cartstyle.module.css";
+import CartBox from "../components/CartBox";
 import { CiHeart } from "react-icons/ci";
 import { TbDiscount2 } from "react-icons/tb";
+import AddressDrawer from "../components/AddressDrawer";
 
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 
@@ -60,7 +62,16 @@ function Cart() {
             <p>Saved for later</p>
           </span>
         </div>
-       
+        {cartData.map((e) => (
+          <CartBox
+            key={e.id}
+            id={e.id}
+            img={e.img}
+            title={e.title}
+            price={e.price}
+            GetData={GetData}
+          />
+        ))}
       </div>
       <div className={cartStyle.right}>
         <div className={cartStyle.rightTop}>
@@ -68,6 +79,7 @@ function Cart() {
             Cart Total: <span>Rs.{cartTotal}</span>
           </div>
           <hr style={{ marginTop: "30px" }} />
+          {/* coupons and address */}
           <div className={cartStyle.rightTopCoupon}>
             <div>
               <InputGroup>
@@ -78,7 +90,10 @@ function Cart() {
                 <Input type="tel" placeholder="Apply Coupons" />
               </InputGroup>
             </div>
-          
+            <div style={{ marginTop: "20px" }}>
+              {" "}
+              <AddressDrawer />
+            </div>
           </div>
         </div>
         <div className={cartStyle.rightBottom}>

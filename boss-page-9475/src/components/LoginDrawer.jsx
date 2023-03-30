@@ -20,6 +20,7 @@ import {
 import { PinInput, PinInputField } from "@chakra-ui/react";
 import { AuthContext } from "../context/AuthContext";
 import { BsPerson, BsCart2 } from "react-icons/bs";
+import pharm from "../pages/Pharm.png"
 
 export default function LoginDrawer({ phoneNo, setPhoneNo }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,8 +50,8 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
               display: "flex",
               fontWeight: "400",
             }}>
-            <BsPerson size={"20px"} />
-            <p style={{ marginLeft: "3px" }}>Login</p>
+            <BsPerson size={"20px"} color={"white"}/>
+            <p style={{ marginLeft: "3px", color:"white" }}>Login</p>
           </Box>
         </Box>
       </Button>
@@ -63,8 +64,8 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth="1px">
-            <Image src="/images/MediCare.png" alt="logo" />
+          <DrawerHeader borderBottomWidth="1px" bg="#10847e">
+            <Image borderRadius={"50px"} src={pharm} alt="logo" />
           </DrawerHeader>
           {otpState ? (
             ""

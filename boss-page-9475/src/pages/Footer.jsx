@@ -11,6 +11,7 @@ import {
     IconButton,
     useColorModeValue,
     Image,
+    Heading
   } from "@chakra-ui/react";
   import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
   import { BiMailSend } from "react-icons/bi";
@@ -53,16 +54,68 @@ import {
         color={useColorModeValue("gray.700", "gray.200")}>
         <Container as={Stack} maxW={"6xl"} py={10}>
           <SimpleGrid
-            templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
-            spacing={8}>
-            <Stack spacing={6}>
-              <Box style={{ width: "70%" }}>
-                <Image src="/images/MediCare.png" alt="logo" />
-              </Box>
-              <Text fontSize={"sm"}>
-                © 2022 Pharmacy. All rights reserved
-              </Text>
-              <Stack direction={"row"} spacing={6}>
+           columns={{ base: 1, sm: 2, md: 4 }} spacing={29}>
+           
+           <Stack align={'flex-start'}>
+          <Heading as='h4' size='md'>Product</Heading>
+            <Link href={'#'}>About Us</Link>
+            <Stack direction={'row'} align={'center'} spacing={10}>
+              <Link href={'#'}>Carrers</Link>
+              
+            </Stack>
+            <Link href={'#'}>Blog</Link>
+            <Link href={'#'}>Partnerwith PharmEasy</Link>
+            <Link href={'#'}>Sell in PharmaEasy</Link>
+            <br></br>
+            <Heading as='h4' size='md'>Our Services</Heading>
+            <Link href={'#'}>Order Medicines</Link>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Link href={'#'}>Health Care Products</Link>
+              
+            </Stack>
+            <Link href={'#'}>Lab Tests</Link>
+            <Link href={'#'}>Find Nearest Collection Center</Link>
+           {/* first row */}
+          </Stack>
+          <Stack align={'flex-start'}>
+            <Heading as='h4' size='md'>Featured Categories</Heading>
+            <Link href={'#'}>Pet Care</Link>
+            <Link href={'#'}>Personal Care</Link>
+            <Link href={'#'}>HealthCare</Link>
+            <Link href={'#'}>Health Food And Drinks</Link>
+            <Link href={'#'}>Beauty</Link>
+            <Link href={'#'}>Elderly Care</Link>
+            <Link href={'#'}>Home Care</Link>
+            <Link href={'#'}>Mother and Baby Care</Link>
+            <Link href={'#'}>Skin Care</Link>
+            <Link href={'#'}>Fitness Supplements</Link>
+            <Link href={'#'}>Diebetics Care Care</Link>
+            <Link href={'#'}>Sexual Wellness</Link>
+            <Link href={'#'}>Ayurvedic</Link>
+            <Link href={'#'}>Accessories</Link>
+            <Link href={'#'}>Top Products</Link>
+          </Stack>
+          <Stack align={'flex-start'} >
+            <Heading as='h4' size='md'>Need help</Heading>
+            <Link href={'#'}>Browse All Medicines</Link>
+            <Link href={'#'}>Browse All Modules</Link>
+            <Link href={'#'}>Browse All Cities</Link>
+            <Link href={'#'}>Browse All Areas</Link>
+            <Link href={'#'}>Browse All Stores</Link>
+            <Link href={'#'}>FAQs</Link>
+            <br></br>
+            <Heading as='h4' size='md'>Policy Info</Heading>
+            <Link href={'#'}>Editorial Info</Link>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Link href={'#'}>Vulnerability Disclouser Policy</Link>
+              
+            </Stack>
+            <Link href={'#'}>Terms And Condition </Link>
+            <Link href={'#'}>Customer Support Policy</Link>
+            <Link href={'#'}>Return Policy</Link>
+          </Stack>
+          <Stack align={"flex-start"} spacing={6}>
+          <Heading as='h4' size='md'>Follow Us</Heading>
                 <SocialButton label={"Twitter"} href={"#"}>
                   <FaTwitter />
                 </SocialButton>
@@ -72,27 +125,9 @@ import {
                 <SocialButton label={"Instagram"} href={"#"}>
                   <FaInstagram />
                 </SocialButton>
-              </Stack>
-            </Stack>
-            <Stack align={"flex-start"}>
-              <ListHeader>Company</ListHeader>
-              <Link href={"#"}>About us</Link>
-              <Link href={"#"}>Blog</Link>
-              <Link href={"#"}>Contact us</Link>
-              <Link href={"#"}>Pricing</Link>
-              <Link href={"#"}>Testimonials</Link>
-            </Stack>
-            <Stack align={"flex-start"}>
-              <ListHeader>Support</ListHeader>
-              <Link href={"#"}>Help Center</Link>
-              <Link href={"#"}>Terms of Service</Link>
-              <Link href={"#"}>Legal</Link>
-              <Link href={"#"}>Privacy Policy</Link>
-              <Link href={"#"}>Status</Link>
-            </Stack>
-  
-            <Stack align={"flex-start"}>
-              <ListHeader>Stay up to date</ListHeader>
+              <br></br>
+              <br></br>
+              <ListHeader as="h4" size='md'> Stay up to date</ListHeader>
               <Stack direction={"row"}>
                 <Input
                   placeholder={"Your email address"}
@@ -113,6 +148,7 @@ import {
                 />
               </Stack>
             </Stack>
+
           </SimpleGrid>
         </Container>
       </Box>

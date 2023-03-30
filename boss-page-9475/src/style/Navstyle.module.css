@@ -2,25 +2,20 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 0px solid blue;
 }
 
 .pinBtn {
   width: 30%;
-  border-right: 1px solid gray;
+  /* border-right: 1px solid gray; */
   margin-left: 15%;
 }
 .logoImg {
-  width: 80%;
-}
-.navAppBox {
-  border: 0px solid red;
+  width: 300px;
 }
 .navApp {
   display: flex;
   height: 35px;
   width: 120px;
-  border: 0px solid blue;
   padding-left: 15px;
 }
 .downloadApp {
@@ -28,9 +23,9 @@
   height: 35px;
   width: 150px;
   border: 1px solid #eef4ff;
-  background-color: #eef4ff;
+  background-color: none;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-top: -4px;
 }
 .navIcon {
@@ -43,7 +38,6 @@
 }
 /* Login button */
 .login {
-  border: 0px solid red;
   margin-top: -5px;
 }
 .login:hover {

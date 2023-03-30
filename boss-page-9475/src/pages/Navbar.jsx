@@ -13,6 +13,7 @@ import {
   Stack,
   Image,
   Text,
+  border,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { CiMobile2, CiDiscount1 } from "react-icons/ci";
@@ -22,6 +23,7 @@ import NavStyle from "../style/Navstyle.module.css";
 import LogOutMenu from "../components/LogOutMenu";
 import Cart from "./Cart";
 import { AuthContext } from "../context/AuthContext";
+import pharm from "./Pharm.png";
 
 const Links = ["Download App", "Login", "Offers", "Cart"];
 
@@ -31,7 +33,7 @@ export default function Navbar() {
   const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
   return (
     <>
-      <Box bg={useColorModeValue("white.100", "white.900")} px={4}>
+      <Box  bg={useColorModeValue("teal.600", "teal.300")} color={"white"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -44,14 +46,14 @@ export default function Navbar() {
             spacing={8}
             alignItems={"center"}
             className={NavStyle.mainBox}>
-            {/* logo */}
             <Box style={{ display: "flex" }}>
               <Box className={NavStyle.pinBtn}>
                 {" "}
                 <NavLink to="/">
-                  <Image
+                  <Image width={"800px"}
+                  borderRadius={"50px"}
                     className={NavStyle.logoImg}
-                    src="/images/MediCare.png"
+                    src={pharm}
                     alt="logo"
                   />
                 </NavLink>{" "}
@@ -60,8 +62,7 @@ export default function Navbar() {
             <HStack
               as={"nav"}
               spacing={4}
-              display={{ base: "none", md: "flex" }}
-              className={NavStyle.navAppBox}>
+              display={{ base: "none", md: "flex" }}>
               <NavLink>
                 <Box className={NavStyle.downloadApp}>
                   <CiMobile2 size={"22px"} />
@@ -116,9 +117,11 @@ export default function Navbar() {
         style={{
           display: "flex",
           justifyContent: "space-around",
-          width: "50%",
+          width: "70%",
           margin: "auto",
-          fontSize: "15px",
+          marginTop:"15px",
+          fontSize: "18px",
+          fontWeight: "initial",
         }}>
         <NavLink>Medicine</NavLink>
         <NavLink>Lab Tests</NavLink>
@@ -130,6 +133,8 @@ export default function Navbar() {
         <NavLink>Value Store</NavLink>
        
       </Box>
+      
+      <hr style={{ marginTop: "20px" }} />
     </>
   );
 }

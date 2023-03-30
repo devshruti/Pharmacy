@@ -1,0 +1,62 @@
+
+  { "topslide": [
+        
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/medicine_ff.webp?dim=256x0",
+          "title": "Medicine",
+          "disc": "UPTO 20% OFF"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/labtest_ff.webp?dim=256x0",
+          "title": "Lab Tests",
+          "disc": "UPTO 70% OFF"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/healthcare_ff.webp?dim=256x0",
+          "title": "Healthcare",
+          "disc": "UPTO 60% OFF"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/health_blogs_ff.webp?dim=256x0",
+          "title": "Health Blogs"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/plus_ff.webp?dim=256x0",
+          "title": "Plus",
+          "disc": "UPTO 5% EXTRA"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/offers_ff.webp?dim=256x0",
+          "title": "Offers"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/offers_1_ff.webp?dim=256x0",
+          "title": "Surgeries"
+        },
+        {
+          "url": "https://assets.pharmeasy.in/apothecary/images/value_store.png?dim=256x0",
+          "title": "Value Store",
+          "disc": "UPTO 50% OFF"
+        }
+      ],
+      "doubleslide":[
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/2691dabe7c0-thyroid.jpg"
+        },
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/840ecda5758-STAR25.jpg"
+        },
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/b3a4bdb683b-1.jpg"
+        },
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/2691dabe7c0-thyroid.jpg"
+        },
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/840ecda5758-STAR25.jpg"
+        },
+        {
+          "url": "https://cdn01.pharmeasy.in/dam/banner/banner/b3a4bdb683b-1.jpg"
+        }
+      ]
+}
