@@ -14,41 +14,41 @@ function AllRoutes() {
       <Route
         path="/cart"
         element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <Cart />
-          </PrivateRoute>
+          // {/* </PrivateRoute> */}
         }
       />
       <Route
         path="/Payment"
         element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <Payment />
-          </PrivateRoute>
+          // </PrivateRoute>
         }
       />
       <Route
         path="/healthcare"
         element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <HealthCare />
-          </PrivateRoute>
+          // </PrivateRoute>
         }
       />
       <Route
         path="/healthyfood"
         element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <HealthyFood />
-          </PrivateRoute>
+          // </PrivateRoute>
         }
       />
       <Route
         path="/healthfood/:id"
         element={
-          <PrivateRoute>
+          // <PrivateRoute>
             <ProductDetails />
-          </PrivateRoute>
+          // </PrivateRoute>
         }
       />
     </Routes>

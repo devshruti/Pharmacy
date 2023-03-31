@@ -1,0 +1,54 @@
+.main {
+  border: 0px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+.right {
+  border: 0px solid red;
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+  padding-right: 25px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.right1 {
+  border: 0px solid rgb(7, 199, 233);
+  font-size: 17px;
+  color: gray;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.right2 {
+  border: 0px solid rgb(233, 75, 7);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.right3 {
+  border: 0px solid rgb(7, 37, 226);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.right4 {
+  border: 0px solid rgb(215, 243, 7);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.saving {
+  border: 1px dashed #11c042;
+  background-color: #f2fff8;
+  color: #11c042;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* .placeOrder Button {
+  width: 700px;
+} */

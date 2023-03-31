@@ -3,9 +3,9 @@ import cartStyle from "../style/Cartstyle.module.css";
 import CartBox from "../components/CartBox";
 import { CiHeart } from "react-icons/ci";
 import { TbDiscount2 } from "react-icons/tb";
-import AddressDrawer from "../components/AddressDrawer";
+import { NavLink } from "react-router-dom";
+import {  Button} from "@chakra-ui/react";
 
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 
 function Cart() {
   const [cartData, setCartData] = React.useState([]);
@@ -14,7 +14,7 @@ function Cart() {
 
   async function GetData() {
     try {
-      let res = await fetch(`https://medic-care-database.glitch.me/cart`);
+      let res = await fetch(` http://localhost:3000/carts`);
       res = await res.json();
       setCartData(res);
     } catch (error) {
@@ -81,18 +81,26 @@ function Cart() {
           <hr style={{ marginTop: "30px" }} />
           {/* coupons and address */}
           <div className={cartStyle.rightTopCoupon}>
-            <div>
-              <InputGroup>
-                <InputLeftElement
+            {/* <div> */}
+              {/* <InputGroup> */}
+                {/* <InputLeftElement
                   pointerEvents="none"
                   children={<TbDiscount2 color="#10847e" size={"25px"} />}
-                />
-                <Input type="tel" placeholder="Apply Coupons" />
-              </InputGroup>
-            </div>
+                /> */}
+                {/* <Input type="tel" placeholder="Apply Coupons" /> */}
+              {/* </InputGroup> */}
+            {/* </div> */}
             <div style={{ marginTop: "20px" }}>
               {" "}
-              <AddressDrawer />
+              {/* <AddressDrawer /> */}
+              {/* <Button onClick={<Checkout/>} bg={"blue"} color={"white"} w={"200px"} mt={"20px"} ml={"70%"}>Checkout</Button> */}
+              <NavLink to="/Payment">
+                    {" "}
+                    <Button mt={4} colorScheme="teal">
+                      Payment
+                    </Button>
+                  </NavLink>
+              
             </div>
           </div>
         </div>

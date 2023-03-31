@@ -7,7 +7,7 @@ function CartBox({ title, price, img, id, GetData }) {
   async function PostData() {
     try {
       let res = await fetch(
-        `https://medic-care-database.glitch.me/cart/${id}`,
+        `http://localhost:3000/carts/${id}`,
         {
           method: "Delete",
           headers: {

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React from "react"
 import {
   Input,
   InputGroup,
@@ -11,10 +12,7 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
-// import ICON
 import { BsSearch } from "react-icons/bs";
-
-// Import components
 import Carousel from "./Extras/Carousel";
 import Offer from "./Extras/Offer";
 import Category from "./Extras/Category";
@@ -164,7 +162,26 @@ const Articles = [
     details: "Avocado Oil: Uses, Benefits, Side Effects By Dr. Rajeev Singh",
   },
 ];
+
+const placeholderText = ["Medicine", "Shampoo", "Health Drink"];
+
 export default function Content() {
+
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = () => {
+      setIndex(prevIndex => {
+        if(prevIndex === placeholderText.length - 1){
+          return 0;
+        } 
+        return prevIndex + 1;
+      })
+    };
+    setInterval(timer, 2000);
+    return () => { clearInterval(timer); }
+  }, []);
+
   return (
     <div className={content.mainBox}>
       <div id="search_box">
@@ -178,7 +195,7 @@ export default function Content() {
               <InputLeftElement children={<BsSearch />} />
               <Input
                 type="tel"
-                placeholder="Search for medicine"
+                placeholder={`Search For ${placeholderText[index]}`}
                 borderRadius="40px"
               />
               <InputRightElement

@@ -32,7 +32,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
   return (
-    <>
+    <Box position={"sticky"} top={0} >
       <Box  bg={useColorModeValue("teal.600", "teal.300")} color={"white"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -119,9 +119,10 @@ export default function Navbar() {
           justifyContent: "space-around",
           width: "70%",
           margin: "auto",
-          marginTop:"15px",
+          // marginTop:"15px",
           fontSize: "18px",
           fontWeight: "initial",
+          backgroundColor: "white"
         }}>
         <NavLink>Medicine</NavLink>
         <NavLink>Lab Tests</NavLink>
@@ -132,9 +133,8 @@ export default function Navbar() {
         <NavLink>Offers</NavLink>
         <NavLink>Value Store</NavLink>
        
-      </Box>
-      
       <hr style={{ marginTop: "20px" }} />
-    </>
+      </Box>
+    </Box>
   );
 }
