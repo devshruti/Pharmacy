@@ -1,0 +1,45 @@
+.mainBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pinBtn {
+  width: 30%;
+  /* border-right: 1px solid gray; */
+  margin-left: 15%;
+}
+.logoImg {
+  width: 300px;
+}
+.navApp {
+  display: flex;
+  height: 35px;
+  width: 120px;
+  padding-left: 15px;
+}
+.downloadApp {
+  display: flex;
+  height: 35px;
+  width: 150px;
+  border: 1px solid #eef4ff;
+  background-color: none;
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: -4px;
+}
+.navIcon {
+  size: 20px;
+}
+.navHeading {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+/* Login button */
+.login {
+  margin-top: -5px;
+}
+.login:hover {
+  border-bottom: 1px dashed black;
+}

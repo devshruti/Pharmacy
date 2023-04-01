@@ -1,0 +1,57 @@
+.filter {
+  display: flex;
+  border: 0px solid rgb(12, 142, 228);
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.filter h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.filter > div:nth-child(2) p {
+  width: 200px;
+  margin-left: -20px;
+  font-size: larger;
+  margin-top: 5px;
+}
+.filter > div:nth-child(2) {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.products {
+  border: 0px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+  gap: 15px;
+}
+.products > div {
+  border: 1px solid gainsboro;
+  padding: 20px;
+  border-radius: 10px;
+}
+.products > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.products > div img {
+  border: 0px solid blueviolet;
+
+  height: 90%;
+  margin: auto;
+}
+.products > div > div:nth-child(1) {
+  border: 0px solid orange;
+  height: 250px;
+}
+.products > div > div:nth-child(2) {
+  border: 0px solid rgb(47, 255, 0);
+  margin-top: 10px;
+}
+.products > div > div:nth-child(3) {
+  border: 0px solid rgb(255, 0, 0);
+  margin-top: 10px;
+  font-weight: 500;
+}
