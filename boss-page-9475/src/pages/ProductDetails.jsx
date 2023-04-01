@@ -30,7 +30,7 @@ export default function ProductDetails() {
   const [data, setData] = React.useState({});
   async function GetData() {
     try {
-      let res = await fetch(`https://medic-care-database.glitch.me/data/${id}`);
+      let res = await fetch(`http://localhost:3000/Fooddata/${id}`);
       res = await res.json();
       setData(res);
     } catch (error) {
@@ -56,6 +56,7 @@ export default function ProductDetails() {
       alert("Product Added to Cart")
     } catch (error) {
       console.log(error);
+      alert("Product Already Added to Cart")
     }
   }
 

@@ -27,7 +27,8 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
   const firstField = React.useRef();
   const [otpState, setOtpState] = React.useState(false);
   const [otpNumber, setOtpNumber] = React.useState("");
-
+  const [otpVal,setOtpVal]=React.useState()
+  const [login,setLogin]=React.useState()
   const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
 
   function OtpGenerator() {
@@ -39,7 +40,13 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
     setOtpNumber(OTP);
     setOtpState(true);
   }
-
+const onclick = () => {
+  if(otpVal===otpNumber){
+    setLogin(Login)
+  }else{
+  alert("Wrong OTP")
+  }
+}
   return (
     <>
       <Button colorScheme="white" onClick={onOpen}>
@@ -67,7 +74,7 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
           <DrawerHeader borderBottomWidth="1px" bg="#10847e">
             <Image borderRadius={"50px"} src={pharm} alt="logo" />
           </DrawerHeader>
-          {otpState ? (
+          {otpNumber.length===4 ? (
             ""
           ) : (
             <DrawerBody>
@@ -107,8 +114,8 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
                 <Box>
                   <FormLabel>Enter OTP sent to +91 {phoneNo}</FormLabel>
                   <HStack>
-                    <PinInput>
-                      <PinInputField />
+                    <PinInput value={otpVal} onChange={(value)=>setOtpVal(value)}>
+                      <PinInputField /> 
                       <PinInputField />
                       <PinInputField />
                       <PinInputField />
@@ -136,7 +143,7 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
                 </Box>
                 <Button
                   style={{ backgroundColor: "#10847e", color: "white" }}
-                  onClick={Login}>
+                  onClick={onclick}>
                   Continue
                 </Button>
               </Stack>
