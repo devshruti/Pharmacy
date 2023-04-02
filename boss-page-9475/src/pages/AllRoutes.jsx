@@ -6,6 +6,7 @@ import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
 import Payment from "./Payment";
 import PrivateRoute from "./PrivateRoute";
+import Checkout from "./checkout";
 
 function AllRoutes() {
   return (
@@ -24,6 +25,14 @@ function AllRoutes() {
         element={
           <PrivateRoute>
             <Payment />
+          </PrivateRoute>
+        }
+      />
+       <Route
+        path="/Checkout"
+        element={
+          <PrivateRoute>
+            <Checkout />
           </PrivateRoute>
         }
       />
