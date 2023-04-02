@@ -4,24 +4,20 @@ import { NavLink } from "react-router-dom";
 import {
   Box,
   Flex,
-  Avatar,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   useColorModeValue,
   Stack,
   Image,
   Text,
-  border,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { CiMobile2, CiDiscount1 } from "react-icons/ci";
-import { BsPerson, BsCart2 } from "react-icons/bs";
+import {  BsCart2 } from "react-icons/bs";
 import LoginDrawer from "../components/LoginDrawer";
 import NavStyle from "../style/Navstyle.module.css";
 import LogOutMenu from "../components/LogOutMenu";
-import Cart from "./Cart";
 import { AuthContext } from "../context/AuthContext";
 import pharm from "./Pharm.png";
 
@@ -30,9 +26,9 @@ const Links = ["Download App", "Login", "Offers", "Cart"];
 export default function Navbar() {
   const [phoneNo, setPhoneNo] = React.useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
+  const { auth } = React.useContext(AuthContext);
   return (
-    <Box position={"sticky"} top={0} >
+    <Box >
       <Box  bg={useColorModeValue("teal.600", "teal.300")} color={"white"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -133,7 +129,7 @@ export default function Navbar() {
         <NavLink>Offers</NavLink>
         <NavLink>Value Store</NavLink>
        
-      <hr style={{ marginTop: "20px" }} />
+      
       </Box>
     </Box>
   );

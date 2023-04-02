@@ -16,7 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import Payment from "../Payment";
 
-export default function Address({cartTotal}) {
+export default function Address() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = React.useRef();
 
@@ -62,13 +62,14 @@ export default function Address({cartTotal}) {
                   <br />
                   <Input type="text" placeholder="Street no" />
                   <br />
-                  {/* <Link to="/Payment"> */}
+                  {/* <Payment cartTotal={cartTotal} /> */}
+                  <Link to="/Checkout">
                     {" "}
                     <Button mt={4} colorScheme="teal" type="submit">
                     {/* <Payment cartTotal={cartTotal}/> */}
-                    Save and Continue
+                    CheckOut
                     </Button>
-                  {/* </Link> */}
+                  </Link>
                 </FormControl>
               </form>
             </Stack>
