@@ -2,7 +2,7 @@
 
 Deployed Link: https://6429ae19a6d9132112ddb61c--pharmacydev.netlify.app/
 
-A individual project built over a period of 5 days.
+Pharmacy is a user-friendly website. This website aims to replicate the features and functionalities of PharmEasy. 
 
 TECH-STACK:
 <ul>
