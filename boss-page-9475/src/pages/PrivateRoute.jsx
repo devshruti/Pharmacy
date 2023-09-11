@@ -6,7 +6,8 @@ function PrivateRoute({ children }) {
   const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
 
   if (auth === false) {
-    return <Navigate to="/" />;
+    alert("Login to continue");
+    return <Navigate to="/" /> ;
   }
   return children;
 }
