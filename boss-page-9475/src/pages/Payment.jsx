@@ -14,7 +14,7 @@ function Payment({cartTotal}) {
   const [delivery, setDelivery] = React.useState(0);
   async function GetData() {
     try {
-      let res = await fetch(`http://localhost:3000/cart`);
+      let res = await fetch(`https://pharmacy-jsonserver.onrender.com/cart`);
       res = await res.json();
       setCartData(res);
     } catch (error) {
@@ -47,7 +47,7 @@ function Payment({cartTotal}) {
       {/* right */}
       <div className={payment.right}>
         <div>
-        {/* {cartData.map((e) => (
+        {cartData.map((e) => (
           <CartBox
             key={e.id}
             id={e.id}
@@ -56,7 +56,7 @@ function Payment({cartTotal}) {
             price={e.price}
             GetData={GetData}
           />
-        ))} */}
+        ))}
         </div>
         <div className={payment.right1}>
           <h1>Price Breakdown</h1>

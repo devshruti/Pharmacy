@@ -30,7 +30,10 @@ export default function ProductDetails() {
   const [data, setData] = React.useState({});
   async function GetData() {
     try {
-      let res = await fetch(`http://localhost:3000/Fooddata/${id}`);
+      let res = await fetch(`https://pharmacy-jsonserver.onrender.com/Fooddata/${id}`);
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
       res = await res.json();
       setData(res);
     } catch (error) {
@@ -44,13 +47,16 @@ export default function ProductDetails() {
   async function PostData(e) {
     e.preventDefault();
     try {
-      let res = await fetch(`http://localhost:3000/carts`, {
+      let res = await fetch(`https://pharmacy-jsonserver.onrender.com/carts`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json",
         },
       });
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
       res = await res.json();
       console.log(res);
       alert("Product Added to Cart")

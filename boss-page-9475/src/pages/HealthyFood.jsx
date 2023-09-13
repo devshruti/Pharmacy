@@ -11,7 +11,7 @@ function HealthyFood() {
   async function GetData() {
     try {
       let res = await fetch(
-        `http://localhost:3000/Fooddata?_sort=price&_order=${sort}`
+        `https://pharmacy-jsonserver.onrender.com/Fooddata?_sort=price&_order=${sort}`
       );
       res = await res.json();
       setData(res);
