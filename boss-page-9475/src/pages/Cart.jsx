@@ -3,7 +3,7 @@ import cartStyle from "../style/Cartstyle.module.css";
 import CartBox from "../components/CartBox";
 import {  useParams } from "react-router-dom";
 import {  Button} from "@chakra-ui/react";
-import Address from "./Extras/Address";
+import { Link } from "react-router-dom";
 
 
 function Cart() {
@@ -15,7 +15,7 @@ function Cart() {
       console.log(qty);
   async function GetData() {
     try {
-      let res = await fetch(` http://localhost:3000/carts`);
+      let res = await fetch(` https://pharmacy-jsonserver.onrender.com/carts`);
       res = await res.json();
       setCartData(res);
       console.log(qty);
@@ -101,12 +101,12 @@ function Cart() {
         </div>
         <div className={cartStyle.rightTop}>
             <div style={{ marginTop: "-20px" }}>
-              {/* <NavLink to="/Payment"> */}
+              <Link to="/Checkout">
                     {" "}
                     <Button mt={4} colorScheme="teal">
-                     <Address cartTotal={cartTotal} /> 
+                     CheckOut
                     </Button>
-                  {/* </NavLink> */}
+                    </Link>
             </div>
         </div>
        <div style={{border:"2px solid teal", marginTop:"30px",padding:"2%", color:"teal" ,fontWeight:"bold"}}>
