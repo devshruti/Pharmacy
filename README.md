@@ -1,6 +1,6 @@
 # -boss-page-9475
 
-Deployed Link: https://6429ae19a6d9132112ddb61c--pharmacydev.netlify.app/
+Deployed Link: [https://6429ae19a6d9132112ddb61c--pharmacydev.netlify.app/](https://6502bafb39a8712d2b6c0daf--pharmaaacy.netlify.app/)
 
 Pharmacy is a user-friendly website. This website aims to replicate the features and functionalities of PharmEasy. 
 
