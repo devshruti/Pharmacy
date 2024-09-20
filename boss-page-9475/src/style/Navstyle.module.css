@@ -43,3 +43,86 @@
 .login:hover {
   border-bottom: 1px dashed black;
 }
+
+/* Responsive for Tablet and Mobile Screens */
+@media (max-width: 768px) {
+  /* Main container */
+  .mainBox {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Pin button */
+  .pinBtn {
+    width: 80%; /* Adjust width for mobile */
+    margin-left: 0; /* Remove margin for better centering */
+    margin-bottom: 15px; /* Add spacing */
+  }
+
+  /* Logo image */
+  .logoImg {
+    width: 200px; /* Resize logo for mobile */
+    margin-bottom: 20px;
+  }
+
+  /* Navigation App icon and text */
+  .navApp {
+    height: 30px;
+    width: 100px; /* Reduce width */
+    padding-left: 10px; /* Adjust padding */
+    margin-bottom: 10px;
+  }
+
+  /* Download App button */
+  .downloadApp {
+    height: 30px;
+    width: 130px; /* Resize width */
+    padding: 5px;
+    border-radius: 15px; /* Adjust border radius */
+    margin-top: 0; /* Remove negative margin */
+    margin-bottom: 10px; /* Add spacing */
+  }
+
+  /* Navigation Heading */
+  .navHeading {
+    font-size: 14px; /* Adjust font size */
+    margin-left: 8px; /* Adjust margin */
+  }
+
+  /* Login button */
+  .login {
+    margin-top: 10px; /* Adjust margin */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Pin button */
+  .pinBtn {
+    width: 90%; /* Full width for very small screens */
+  }
+
+  /* Logo image */
+  .logoImg {
+    width: 150px; /* Smaller logo for small screens */
+  }
+
+  /* Navigation App icon and text */
+  .navApp {
+    height: 25px;
+    width: 80px; /* Further adjust width */
+  }
+
+  /* Download App button */
+  .downloadApp {
+    height: 25px;
+    width: 110px; /* Further adjust size */
+  }
+
+  /* Navigation Heading */
+  .navHeading {
+    font-size: 12px; /* Smaller font */
+  }
+}
+
+

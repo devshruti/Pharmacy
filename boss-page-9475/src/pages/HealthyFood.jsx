@@ -8,20 +8,25 @@ function HealthyFood() {
   const [data, setData] = React.useState([]);
   const [sort, setSort] = React.useState("asc");
 
-  async function GetData() {
+  const GetData = React.useCallback(async () => {
     try {
       let res = await fetch(
         `https://pharmacy-jsonserver.onrender.com/Fooddata?_sort=price&_order=${sort}`
       );
-      res = await res.json();
-      setData(res);
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+      const data = await res.json();
+      setData(data);
     } catch (error) {
       console.log(error);
     }
-  }
+  }, [sort]); // Include 'sort' as a dependency
+  
   React.useEffect(() => {
     GetData();
-  }, [sort]);
+  }, [GetData]); // Use 'GetData' in the dependency array
+  
   // console.log(data);
   return (
     <div style={{ width: "65%", margin: "auto" }}>

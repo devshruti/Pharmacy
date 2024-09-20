@@ -2,23 +2,18 @@ import React from "react";
 import { useParams } from "react-router";
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
   Image,
-  Flex,
-  VStack,
   Button,
   Heading,
   SimpleGrid,
   StackDivider,
   useColorModeValue,
-  VisuallyHidden,
   List,
   ListItem,
   Grid,
-  ButtonGroup,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -28,21 +23,23 @@ export default function ProductDetails() {
   let { id } = useParams();
 
   const [data, setData] = React.useState({});
-  async function GetData() {
+  const GetData = React.useCallback(async () => {
     try {
       let res = await fetch(`https://pharmacy-jsonserver.onrender.com/Fooddata/${id}`);
       if (!res.ok) {
         throw new Error(`HTTP error! Status: ${res.status}`);
       }
-      res = await res.json();
-      setData(res);
+      const data = await res.json();
+      setData(data);
     } catch (error) {
       console.log(error);
     }
-  }
+  }, [id]); // Include 'id' as a dependency if it changes
+  
   React.useEffect(() => {
     GetData();
-  }, []);
+  }, [GetData]); // Include GetData in the dependency array
+  
 
   async function PostData(e) {
     e.preventDefault();

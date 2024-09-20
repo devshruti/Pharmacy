@@ -33,3 +33,54 @@
   color: green;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .category {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns on smaller screens */
+    gap: 10px; /* Reduce the gap for mobile */
+  }
+
+  .category > div {
+    height: 100px; /* Adjust height for mobile */
+    border-radius: 8px; /* Slightly reduce border-radius */
+  }
+
+  .category > div > div:nth-child(1) {
+    width: 20%; /* Adjust width of the image container */
+  }
+
+  .category > div > div:nth-child(1) img {
+    width: 70%; /* Adjust image size */
+  }
+
+  .category > div > div:nth-child(2) {
+    width: 40%; /* Adjust the width for the text container */
+  }
+
+  .category > div > div:nth-child(3) {
+    width: 25%; /* Adjust the width for the price/container */
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .category {
+    grid-template-columns: 1fr; /* Stack items in a single column on very small screens */
+    gap: 8px;
+  }
+
+  .category > div {
+    height: 80px; /* Further adjust the height for small screens */
+  }
+
+  .category > div > div:nth-child(1) img {
+    width: 60%; /* Further adjust image size */
+  }
+
+  .category > div > div:nth-child(2),
+  .category > div > div:nth-child(3) {
+    font-size: 12px; /* Smaller font for very small screens */
+  }
+}
+
+

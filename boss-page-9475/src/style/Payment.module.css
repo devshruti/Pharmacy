@@ -52,3 +52,67 @@
 /* .placeOrder Button {
   width: 700px;
 } */
+
+/* Mobile responsiveness for Tablet and smaller screens */
+@media (max-width: 768px) {
+  /* Main container */
+  .main {
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Full width on smaller screens */
+    padding: 5px; /* Adjust padding */
+  }
+
+  /* Right container */
+  .right {
+    width: 90%; /* Reduce width */
+    padding-right: 10px; /* Adjust padding */
+    margin-top: 5%; /* Reduce margin */
+    margin-bottom: 5%;
+  }
+
+  /* Text adjustments */
+  .right1 {
+    font-size: 15px; /* Adjust font size */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .right2, .right3, .right4 {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to the left */
+    margin-bottom: 15px; /* Increase margin between elements */
+  }
+
+  /* Saving section */
+  .saving {
+    font-size: 14px; /* Adjust font size */
+    margin-top: 15px; /* Reduce margin */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Right container for very small screens */
+  .right {
+    width: 100%; /* Full width */
+    padding-right: 0; /* Remove right padding */
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  /* Text adjustments for small screens */
+  .right1 {
+    font-size: 14px; /* Smaller font */
+  }
+
+  /* Stack elements for small screens */
+  .right2, .right3, .right4 {
+    margin-bottom: 10px; /* Less spacing */
+  }
+
+  /* Saving section */
+  .saving {
+    font-size: 12px; /* Smaller font */
+  }
+}
+
+
+

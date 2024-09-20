@@ -108,7 +108,7 @@ export default function Navbar() {
         ) : null}
       </Box>
       <hr />
-      <Box
+      {/* <Box
         p={2}
         style={{
           display: "flex",
@@ -131,6 +131,29 @@ export default function Navbar() {
        
       
       </Box>
+       */}
+
+<Box
+  p={2}
+  display={{ base: "block", md: "flex" }} // Stack links on small screens and flex on medium and up
+  justifyContent={{ base: "center", md: "space-around" }} // Center on small screens, space around on medium and up
+  width={{ base: "100%", md: "70%" }} // Full width on small screens, 70% on medium and up
+  margin="auto"
+  fontSize={{ base: "16px", md: "18px" }} // Smaller font size on small screens
+  fontWeight="initial"
+  backgroundColor="white"
+>
+  <NavLink>Medicine</NavLink>
+  <NavLink>Lab Tests</NavLink>
+  <NavLink to="/healthcare">Healthcare</NavLink>
+  <NavLink>Surgeries</NavLink>
+  <NavLink to="/healthyfood">Health Blogs</NavLink>
+  <NavLink>PLUS</NavLink>
+  <NavLink>Offers</NavLink>
+  <NavLink>Value Store</NavLink>
+</Box>
+
+
     </Box>
   );
 }

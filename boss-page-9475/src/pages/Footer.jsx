@@ -10,7 +10,6 @@ import {
     Input,
     IconButton,
     useColorModeValue,
-    Image,
     Heading
   } from "@chakra-ui/react";
   import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";

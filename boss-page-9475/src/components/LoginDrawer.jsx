@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { PinInput, PinInputField } from "@chakra-ui/react";
 import { AuthContext } from "../context/AuthContext";
-import { BsPerson, BsCart2 } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 import pharm from "../pages/Pharm.png"
 
 export default function LoginDrawer({ phoneNo, setPhoneNo }) {
@@ -27,9 +27,9 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
   const firstField = React.useRef();
   const [otpState, setOtpState] = React.useState(false);
   const [otpNumber, setOtpNumber] = React.useState("");
-  const [otpVal,setOtpVal]=React.useState()
-  const [login,setLogin]=React.useState()
-  const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
+  const [otpVal, setOtpVal] = React.useState()
+  const [login, setLogin] = React.useState()
+  const { Login } = React.useContext(AuthContext);
 
   function OtpGenerator() {
     let num = "1234567890";
@@ -40,13 +40,13 @@ export default function LoginDrawer({ phoneNo, setPhoneNo }) {
     setOtpNumber(OTP);
     setOtpState(true);
   }
-const onclick = () => {
-  if(otpVal===otpNumber){
-    setLogin(Login)
-  }else{
-  alert("Wrong OTP")
+  const onclick = () => {
+    if (otpVal === otpNumber) {
+      setLogin(Login)
+    } else {
+      alert("Wrong OTP")
+    }
   }
-}
   return (
     <>
       <Button colorScheme="white" onClick={onOpen}>
@@ -57,8 +57,8 @@ const onclick = () => {
               display: "flex",
               fontWeight: "400",
             }}>
-            <BsPerson size={"20px"} color={"white"}/>
-            <p style={{ marginLeft: "3px", color:"white" }}>Login</p>
+            <BsPerson size={"20px"} color={"white"} />
+            <p style={{ marginLeft: "3px", color: "white" }}>Login</p>
           </Box>
         </Box>
       </Button>
@@ -74,7 +74,7 @@ const onclick = () => {
           <DrawerHeader borderBottomWidth="1px" bg="#10847e">
             <Image borderRadius={"50px"} src={pharm} alt="logo" />
           </DrawerHeader>
-          {otpNumber.length===4 ? (
+          {otpNumber.length === 4 ? (
             ""
           ) : (
             <DrawerBody>
@@ -114,8 +114,8 @@ const onclick = () => {
                 <Box>
                   <FormLabel>Enter OTP sent to +91 {phoneNo}</FormLabel>
                   <HStack>
-                    <PinInput value={otpVal} onChange={(value)=>setOtpVal(value)}>
-                      <PinInputField /> 
+                    <PinInput value={otpVal} onChange={(value) => setOtpVal(value)}>
+                      <PinInputField />
                       <PinInputField />
                       <PinInputField />
                       <PinInputField />

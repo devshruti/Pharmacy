@@ -222,3 +222,173 @@
   margin: auto;
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .Heading {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .Sub_Heading {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+
+  .mainBox {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Adjust .catMain_1 for mobile */
+  .catMain_1 {
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .catMain_1 div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .catMain_1 div img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust .LabBox for mobile */
+  .LabBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .LabBox div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust .Offers for mobile */
+  .Offers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Offers div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust .Order (prescription) for mobile */
+  .Order {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .OrderLeft,
+  .OrderRight {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .OrderLeft {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .OrderLeft div img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .OrderRight h4 {
+    margin-bottom: 10px;
+  }
+
+  /* Shop by Category */
+  .ShopByCategory {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ShopByCategory div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ShopByCategory div img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* New Launch */
+  .NewLaunch {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .NewLaunch img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Purple Box */
+  .PurpleBox {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .SubPurpleBox,
+  .SubPurpleBox1,
+  .SubPurpleBox2,
+  .SubPurpleBox3 {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .SubPurpleBoxMid {
+    width: 100%;
+    text-align: center;
+  }
+
+  .SubPurpleBoxMid Button {
+    margin-top: 10px;
+  }
+
+  /* Shop by Concern */
+  .ShopByConcern {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ShopByConcern div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ShopByConcern div img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Articles */
+  .Articles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Articles div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .Articles div img {
+    width: 100%;
+    height: auto;
+  }
+}
+

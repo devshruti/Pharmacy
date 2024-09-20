@@ -8,7 +8,7 @@ import {
 import { AuthContext } from "../context/AuthContext";
 
 function LogOutMenu({ phoneNo }) {
-  const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
+  const {  Logout } = React.useContext(AuthContext);
   return (
     <Menu>
       <MenuButton

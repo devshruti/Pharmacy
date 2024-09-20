@@ -3,7 +3,7 @@ import React from "react";
 import careStyles from "../style/HealthCare.module.css";
 
 import Carousel from "./Extras/Carousel";
-import Data_3_Flex from "./Extras/Data_3_Flex";
+import Data3Flex from "./Extras/Data3Flex";
 
 const HealthCare_Cards = [
     "https://cms-contents.pharmeasy.in/banner/037dcfb46a9-toothsi.jpg",
@@ -87,7 +87,7 @@ function HealthCare() {
       {/* category */}{" "}
       <div className={careStyles.category}>
         {HealthCare_category.map((e) => (
-          <Data_3_Flex key={e.name} img={e.img} name={e.name} off={e.off} />
+          <Data3Flex key={e.name} img={e.img} name={e.name} off={e.off} />
         ))}
       </div>
       <div id="text area" style={{ textAlign: "left" }}>

@@ -55,3 +55,89 @@
   margin-top: 10px;
   font-weight: 500;
 }
+
+/* Responsive for Tablet and Mobile Screens */
+@media (max-width: 768px) {
+  /* Filter Section */
+  .filter {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  .filter h1 {
+    font-size: 20px; /* Reduce font size for mobile */
+    margin-bottom: 10px; /* Add spacing between title and filters */
+  }
+
+  .filter > div:nth-child(2) {
+    width: 100%; /* Full width for mobile */
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .filter > div:nth-child(2) p {
+    width: auto; /* Remove fixed width */
+    margin-left: 0; /* Remove negative margin */
+    font-size: medium; /* Adjust font size */
+  }
+
+  /* Products Section */
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    gap: 10px; /* Reduce gap */
+  }
+
+  .products > div {
+    padding: 15px; /* Reduce padding */
+    border-radius: 8px;
+  }
+
+  .products > div img {
+    height: 80%; /* Adjust image height */
+  }
+
+  .products > div > div:nth-child(1) {
+    height: 200px; /* Reduce height for product image */
+  }
+
+  .products > div > div:nth-child(3) {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Filter Section */
+  .filter h1 {
+    font-size: 18px; /* Smaller font for very small screens */
+  }
+
+  .filter > div:nth-child(2) {
+    flex-direction: column; /* Stack filter options vertically */
+    align-items: flex-start;
+    width: 100%; /* Full width */
+  }
+
+  .filter > div:nth-child(2) p {
+    margin-top: 5px; /* Adjust margin */
+    font-size: small; /* Smaller font */
+  }
+
+  /* Products Section */
+  .products {
+    grid-template-columns: 1fr; /* Stack products in a single column on small screens */
+  }
+
+  .products > div img {
+    height: 70%; /* Further adjust image height */
+  }
+
+  .products > div > div:nth-child(1) {
+    height: 150px; /* Further reduce height for product image */
+  }
+
+  .products > div > div:nth-child(3) {
+    font-size: 12px; /* Smaller font for prices */
+  }
+}
+
+

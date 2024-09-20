@@ -5,12 +5,7 @@ import {
   InputGroup,
   Button,
   InputLeftElement,
-  InputRightElement,
-  Table,
-  Tbody,
-  Tr,
-  Td,
-  TableContainer,
+  InputRightElement
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import Carousel from "./Extras/Carousel";
@@ -172,16 +167,17 @@ export default function Content() {
   React.useEffect(() => {
     const timer = () => {
       setIndex(prevIndex => {
-        if(prevIndex === placeholderText.length - 1){
+        if (prevIndex === placeholderText.length - 1) {
           return 0;
-        } 
+        }
         return prevIndex + 1;
-      })
+      });
     };
-    setInterval(timer, 2000);
-    return () => { clearInterval(timer); }
+    
+    const intervalId = setInterval(timer, 2000); // Capture the interval ID
+    return () => { clearInterval(intervalId); }; // Clear the interval using the ID
   }, []);
-
+  
   return (
     <div className={content.mainBox}>
       <div id="search_box">

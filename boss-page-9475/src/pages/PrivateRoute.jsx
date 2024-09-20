@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Navigate } from "react-router-dom";
 
 function PrivateRoute({ children }) {
-  const { auth, setAuth, Login, Logout } = React.useContext(AuthContext);
+  const { auth } = React.useContext(AuthContext);
 
   if (auth === false) {
     alert("Login to continue");
